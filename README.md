@@ -9,6 +9,10 @@ ODE Graphic-Solver is a program written in Java using Processing used for gettin
 
 You simply need to install Processing (https://www.processing.org/), open ODE_GS.pde and click run.
 
+#How can I run it?
+
+In the Binaries folder, find your OS and download it.
+
 #Status
 
 Currently, the code is not useful since it only uses an Euler method for solving the system.
