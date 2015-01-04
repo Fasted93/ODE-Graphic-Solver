@@ -26,3 +26,7 @@ Currently, the code is not useful since it only uses an Euler method for solving
 - 3D systems.
 - Let the user change the solving speed and acuracy.
 - Lot of things more...
+
+### Contact
+
+e-mail: martin.sp.93@gmail.com
