@@ -11,7 +11,7 @@ You simply need to install Processing (https://www.processing.org/), open ODE_GS
 
 #How can I run it?
 
-Go to "Releases" and pick the last versionand download it. On "binaries" unzip the version for your OS and run it. I recommend downloading it from Releases because the main branches probably won't have the latest binaries compiled.
+Go to "Releases" and pick the last versionand download it and download your binaries.
 
 Of course, you can compile those versions and run it freely.
 
