@@ -5,10 +5,6 @@ ODE - Graphic Solver
 
 ODE Graphic-Solver is a program written in Java using Processing used for getting a numerical solution and graphing the phase space of an ODE system.
 
-###What do I need to run it?
-
-You simply need to install Processing (https://www.processing.org/), open ODE_GS.pde and click run.
-
 ###How can I run it?
 
 Go to "Releases" and pick the last versionand download it and download your binaries.
