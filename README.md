@@ -9,7 +9,7 @@ ODE Graphic-Solver is a program written in Java using Processing used for gettin
 
 Go to "Releases" and pick the last versionand download it and download your binaries.
 
-Of course, you can compile those versions and run it freely.
+You can compile the latest non-release versions and run it freely.
 
 ###Status
 
