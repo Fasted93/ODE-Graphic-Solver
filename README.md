@@ -26,10 +26,10 @@ Currently, the code is not useful since it only uses an Euler method for solving
 - You can write in the code a 2D ODE system and it will graph the solutions when you click on a point.
 - Uses the Euler's method for solving the system and set the speed and integration precission.
 - Zoom in and out with "W" and "S".
+- Input an ODE system
 
 ##What ODE-GS can't do and probably will do
 
-- Let the user input the ODE system.
 - 2D camera.
 - RK4 and more integration methods.
 - Change the integration method.

@@ -7,10 +7,12 @@
 //Package used to handle mathematical functions as input strings
 import net.sourceforge.jeval.*;
 
+//Package used to handle GUI
+import g4p_controls.*;
+
 //Lists stuff
 import java.util.Iterator;
 import java.util.LinkedList;
-
 
 ///Globals///
 
@@ -23,9 +25,15 @@ float time; //global time
 float CENTERX, CENTERY;
 float zoom; //camera zoom
 
-//ODE System
+//ODE System [UPDATE]
 MathFunc F1;
 MathFunc F2;
+
+//Used to change F
+String F1_str;
+String F2_str;
+String F1_GUI;
+String F2_GUI;
 
 //List of all orbits
 LinkedList<Orbit> OrbitList;
@@ -136,35 +144,55 @@ class Orbit {
 
 
 void setup() {
-  zoom = 1;
+  //GUI stuff
+  createGUI();
+  customGUI();
+  
   evaluator = new Evaluator();
-  F1 = new MathFunc("-x + y");
-  F2 = new MathFunc("-y - x");
-  OrbitList = new LinkedList<Orbit>();
   H = 0.01;
   frameRate(60);
   size(500,500);
-  background(255);
-  time = 0;
   CENTERX = width/2;
   CENTERY = height/2;
+  
+  F1_str = "-x + y";
+  F2_str = "-y - x";
+  F1_GUI = "-x + y";
+  F2_GUI = "-y - x";
+  simulation_start();
+}
+
+void simulation_start() {
+  background(255);
+  evaluator = new Evaluator();
+  zoom = 1;
+  OrbitList = new LinkedList<Orbit>();
+  time = 0;
+  F1 = new MathFunc(F1_str);
+  F2 = new MathFunc(F2_str);
+  println(F1_str);
+  println(F2_str);
+  println("------");
 }
 
 void draw() {
-    strokeWeight(1/zoom);
-    translate(+CENTERX, +CENTERY);
-    scale(zoom); 
-    translate(-CENTERX, -CENTERY);
-    background(255);
-    Iterator<Orbit> iter = OrbitList.iterator();
-    while (iter.hasNext()) {
-      Orbit updateOrbit = iter.next();
-      updateOrbit.next_point_euler();
-      updateOrbit.display();
-    }
-    
-    time += H;
-   
+  canvas_draw();
+}
+
+void canvas_draw() {
+  strokeWeight(1/zoom);
+  translate(+CENTERX, +CENTERY);
+  scale(zoom); 
+  translate(-CENTERX, -CENTERY);
+  background(255);
+  Iterator<Orbit> iter = OrbitList.iterator();
+  while (iter.hasNext()) {
+    Orbit updateOrbit = iter.next();
+    updateOrbit.next_point_euler();
+    updateOrbit.display();
+  }
+  
+  time += H; 
 }
 
 void keyPressed() {
@@ -183,3 +211,6 @@ void mouseClicked() {
   OrbitList.add(newOrbit);
 }
 
+public void customGUI(){
+
+}
