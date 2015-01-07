@@ -17,10 +17,11 @@ import java.util.LinkedList;
 //Integration parameters
 float H; //integration precision
 float time; //global time
-float zoom; //camera zoom
+
 
 //Graphical help
 float CENTERX, CENTERY;
+float zoom; //camera zoom
 
 //ODE System
 MathFunc F1;
@@ -168,11 +169,11 @@ void draw() {
 
 void keyPressed() {
   if (key == 'w') {
-    zoom += 0.01;
+    zoom = zoom*1.1;
     println(zoom);
   } 
   else if (key == 's') {
-    zoom -= 0.01;
+    zoom = zoom*0.9;
     println(zoom);
   }
 }
